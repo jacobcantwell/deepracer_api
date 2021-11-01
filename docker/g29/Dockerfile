@@ -1,6 +1,6 @@
 FROM python:3.7-slim
 
-LABEL MAINTAINER="lshw.5454@gmail.com"
+LABEL MAINTAINER="jacob.cantwell.deepracer@gmail.com"
 
 ARG DEBIAN_FRONTEND=noninteractive
 

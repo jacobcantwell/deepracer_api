@@ -1,12 +1,12 @@
 import os
 import platform
-import yaml
-import time
+# import yaml
+# import time
 import threading
-import argparse
+# import argparse
 import pygame
 
-from awsdeepracer_control import Client
+from aws-deepracer-control-v2 import Client
 from core.logger import Logger
 
 logger = Logger(logger="Gamepad_mode").getlog()
