@@ -1,21 +1,24 @@
-import os
+from decouple import config
 import platform
-# import yaml
-# import time
-import threading
-# import argparse
 import pygame
+import logging
+import sys
 
-from aws_deepracer_control_v2 import Client
-from core.logger import Logger
+from aws_deepracer_control_v3 import Client
+# Used to manage how fast the screen updates.
+clock = pygame.time.Clock()
+# get operating system
+get_os = platform.system()
 
-logger = Logger(logger="Gamepad_mode").getlog()
+# configure logging
+logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+logging.getLogger().setLevel(logging.INFO)
 
+# global variables used for DeepRacer manual driving
 steer = 0
 drive = 0
-max_speed = 0.25
+max_speed = 1
 done = False
-get_os = platform.system()
 
 pygame.init()
 joystick_count = pygame.joystick.get_count()

@@ -57,8 +57,7 @@ class Client:
     def get_raw_video_stream(self):
         self._get_csrf_token()
         # Get the video stream
-        video_url = self.URL + "/route?topic=/display_mjpeg&width=480&height=360"
-
+        video_url = self.URL + "/route?topic=/camera_pkg/display_mjpeg&width=640&height=480"
         return self.session.get(
             video_url, headers=self.headers, stream=True, verify=False
         )

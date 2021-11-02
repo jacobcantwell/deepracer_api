@@ -80,6 +80,14 @@ docker run -it --rm --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" g29
 
 docker run -it --rm -e password=xxxx -e hostIp=yyyy g29
 
+* Set environmental variables with Python Decouple https://pypi.org/project/python-decouple/
+    * Create a .env file in your root directory
+    * Add values for
+      * LOCAL_IP=[local-ip] - the local IP address of the car in format ###.###.###.###
+      * DEEPRACER_PASSWORD=[password] - string with the password value used to login to the DeepRacer UI
+
+
+
 
 # Other
 - Testing on Windows, Ubuntu, MacOS (with USB port)
