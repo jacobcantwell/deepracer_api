@@ -39,7 +39,7 @@ If You don't need to build the docker then need config the virtual environment f
 
 ```bash
 $Powershell
-> git clone https://github.com/lshw54/deepracer_api.git
+> git clone https://github.com/jacobcantwell/deepracer_api.git
 > cd deepracer_api
 > python -m venv venv
 > .\venv\Scripts\activate
@@ -48,12 +48,25 @@ $Powershell
 
 ```bash
 $linux
-> git clone https://github.com/lshw54/deepracer_api.git
+> git clone https://github.com/jacobcantwell/deepracer_api.git
 > cd deepracer_api
 > python3 -m venv venv
 > . venv/bin/activate
 > pip install -r requirements.txt
 ```
+
+To control with a PS4 joystick
+
+```bash
+python ps4_mode.py
+```
+
+To show the camera feed
+
+```bash
+python show_cam.py
+```
+
 ### When you finish you just need to config the `config.yml` to fill your deepracer ip and password.
 
 - replace the code
@@ -85,7 +98,6 @@ docker run -it --rm -e password=xxxx -e hostIp=yyyy g29
     * Add values for
       * LOCAL_IP=[local-ip] - the local IP address of the car in format ###.###.###.###
       * DEEPRACER_PASSWORD=[password] - string with the password value used to login to the DeepRacer UI
-
 
 
 
