@@ -1,6 +1,12 @@
 # Deepracer_api Rewirte
 This project base on https://github.com/thu2004/deepracer-vehicle-api rewrite to support the new version Deepracer Console `Software version 1.0.606.0`
 
+## Pygame
+
+Pygame is a set of Python modules designed for writing video games. https://www.pygame.org/news.html
+
+This project uses pygame joystick library as input data for the DeepRacer APIs.
+
 # Directory Tree
 ```
 deepracer_api/
@@ -53,6 +59,13 @@ $linux
 > python3 -m venv venv
 > . venv/bin/activate
 > pip install -r requirements.txt
+```
+
+To test that the joysticks work with the Pygame library
+
+```bash
+python .\test\pygame_joystick_simple_test.py
+python .\test\pygame_joystick_full_test.py
 ```
 
 To control with a PS4 joystick

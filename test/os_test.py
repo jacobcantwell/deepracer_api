@@ -1,6 +1,4 @@
 import platform
-import os
-
 
 def os_test():
     get_os = platform.system()
@@ -12,7 +10,6 @@ def os_test():
         print("Mac")
     else:
         print("Other System")
-
 
 if __name__ == "__main__":
     os_test()

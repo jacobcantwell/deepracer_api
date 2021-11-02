@@ -1,10 +1,8 @@
 import pygame
 
-
 # Define some colors.
 BLACK = pygame.Color('black')
 WHITE = pygame.Color('white')
-
 
 # This is a simple class that will help us print to the screen.
 # It has nothing to do with the joysticks, just outputting the
