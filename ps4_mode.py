@@ -117,7 +117,6 @@ def main():
             client.move(steer, drive, max_speed)
             # Limit to 20 frames per second.
             clock.tick(10)
-
     except KeyboardInterrupt:
         print("EXITING NOW")
         joystick.quit()
