@@ -6,7 +6,7 @@ import threading
 # import argparse
 import pygame
 
-from aws-deepracer-control-v2 import Client
+from aws_deepracer_control_v2 import Client
 from core.logger import Logger
 
 logger = Logger(logger="Gamepad_mode").getlog()
@@ -134,7 +134,9 @@ def main():
 
     #with open(os.path.join(dir_path, "config.yaml"), "r") as ymlfile:
     #    cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
-    client = Client(password=os.getenv("password"), ip=os.getenv("hostIp"))
+    # client = Client(password=os.getenv("password"), ip=os.getenv("hostIp"))
+    client = Client(password="t7Nu2nr3", ip="192.168.1.118")
+    
     client.set_manual_mode()
     client.start_car()
     t1 = threading.Thread(target=event_loop, name="t1")

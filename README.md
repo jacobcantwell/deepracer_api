@@ -75,6 +75,12 @@ client = Client(password=os.getenv("password"), ip=os.getenv("hostIp"))
 
 - choose which mode you need then run to `start` sh file
 
+
+docker run -it --rm --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" g29
+
+docker run -it --rm -e password=xxxx -e hostIp=yyyy g29
+
+
 # Other
 - Testing on Windows, Ubuntu, MacOS (with USB port)
 - G29 Mode is not supporting on Linux
