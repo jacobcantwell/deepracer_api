@@ -102,7 +102,7 @@ python steering_wheel_mode.py
 
 ### Testing a Seperate Camera Feed
 
-The AWS DeepRacer car includes a 640x480 colour camera and publishes a video stream to a ROS2 topic. You can view the video stream seperately in a web browser by browsing to the topic as seen in this python script:
+The AWS DeepRacer car includes a 640x480 colour camera and publishes a video stream to a ROS2 topic. You can view the video stream by opening the topic as seen in this python script below. Open a seperate terminal to run this script and you can control and view the AWS DeepRacer car at the same time.
 
 ```bash
 python show_cam.py
