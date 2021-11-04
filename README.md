@@ -71,7 +71,7 @@ For Windows, a simple way to install Python3 and Git is with Chocolatey - the pa
 
 After installation, you need to set some environmental variables for the project.
 
-* Create a `config.yaml` file in the root directory of your project.
+* Create a new `.env` file in the root directory of your project.
 * Add a **LOCAL_IP** value for the local IP address of the car.
 * Add a **DEEPRACER_PASSWORD** value the DeepRacer UI password.
 
