@@ -1,6 +1,6 @@
-# AWS DeepRacer Controller
+# Manually Drive Your AWS DeepRacer
 
-The aim of this project is to document how to drive an AWS DeepRacer vehicle with a joystick controller or a steering wheel.
+The aim of this project is to document how to manually drive an AWS DeepRacer vehicle using a joystick controller or a steering wheel. Out-of-the-box you can do this using a mouse with the vehicle's built-in user interface but it is a lot more fun to drive the car around with a joystick or steering wheel.
 
 ## History
 
@@ -18,6 +18,26 @@ The history of this project:
 * Adding documention for testing compatible joysticks based on the Pygame library
 * More documentation for building and deploying the application
 * Adding more joystick type support and easier to support new joystick types
+
+## About AWS DeepRacer
+
+There are lots of ways to learn about machine learning and robotics but AWS DeepRacer is the most fun way to do it.
+
+You will first need an AWS DeepRacer vehicle which you can order from amazon.com. There are two models: the standard AWS DeepRacer that is 1/18 scale race car with a single camera; and an AWS DeepRacer Evo model which includes the standard model and an extra kit with a second camera, lidar sensor, and a larger shell for the vehicle. You can get started with the standard model and you can add the sensor kit later once you are ready for building advance machine learning models on the car.
+
+### Learning About Machine Learning
+
+You can learn about machine learning at the AWS website.
+
+
+### Learning About Robotics
+
+https://github.com/aws-deepracer/aws-deepracer-launcher
+https://aws.amazon.com/deepracer/robotics-projects/
+
+If you want to AWS DeepRacer code is now open source and available on github.
+
+
 
 ## Pygame - Python for Video Games
 
