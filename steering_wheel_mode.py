@@ -43,6 +43,7 @@ def process_event(event):
             steer = event.value
             drive = drive
             max_speed = max_speed
+
     elif event.type == pygame.JOYAXISMOTION and event.axis == 4: # any break button stop the car
         drive = 0
     elif event.type == pygame.JOYAXISMOTION and event.axis == 5 and event.value > -1: #throttle
@@ -69,15 +70,33 @@ def main():
     joystick = pygame.joystick.Joystick(0)
     joystick.init()
     done = False
+    car_stopped = True
+    car_started = True
+
     try:
         while not done:
             events = pygame.event.get()
+            moving = False
+
             for event in events:
                 process_event(event)
-            logging.debug(u"client.move %s %s %s", steer, drive, max_speed)
-            client.move(steer, drive, max_speed)
-            # Limit to 10 frames per second.
+
+            if drive != 0:
+                if not car_started:
+                    client.start_car()
+                    car_started = True
+                car_stopped = False
+                client.move(steer, drive, max_speed)
+                logging.debug(u"client.move %s %s %s", steer, drive, max_speed)
+            elif not car_stopped:
+                client.stop_car()
+                car_stopped = True
+                car_started = False
+                logging.debug(u"client.stop %s %s %s", steer, drive, max_speed)
+            # Limit to 42 frames per second.
             clock.tick(10)
+
+
     except KeyboardInterrupt:
         print("EXITING NOW")
         joystick.quit()
